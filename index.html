@@ -30,6 +30,7 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
 
 .market-signal-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}.market-signal-item{padding:11px;border:1px solid var(--line);border-radius:13px;background:#fbfcff}.market-signal-item span{display:block;font-size:11px;color:var(--sub);font-weight:850}.market-signal-item b{display:block;font-size:15px;margin-top:4px}.market-action{margin-top:10px;padding:12px 13px;border-radius:13px;background:linear-gradient(135deg,#eef2ff,#ecfeff);font-size:13px;line-height:1.45}.market-action span{display:block;font-size:11px;color:var(--sub);font-weight:850;margin-bottom:3px}.market-action .market-action-text{font-size:14px;font-weight:400}.market-action .market-action-text strong{font-weight:800}.portfolio-status-grid{display:grid;grid-template-columns:1fr;gap:8px;margin-top:8px}.portfolio-status-item{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;row-gap:2px;align-items:center;padding:10px 11px;border:1px solid var(--line);border-radius:13px;background:#fbfcff}.portfolio-status-item span{display:block;font-size:11px;color:var(--sub);font-weight:850}.portfolio-status-item b{display:block;font-size:14px;margin:0;text-align:right}.portfolio-status-item small{display:block;grid-column:1/-1;font-size:10px;color:var(--sub);margin-top:1px;text-align:right}.criteria-note{margin-top:8px;font-size:9.5px;line-height:1.55;color:var(--sub)}.criteria-note b{color:#52617a}.help-q{display:inline-grid;place-items:center;width:18px;height:18px;margin-left:4px;padding:0;border:1px solid #dbe3f0;border-radius:50%;background:#fff;color:#64748b;font-size:11px;font-weight:950;vertical-align:2px;cursor:pointer}.help-q:hover{color:#4f46e5;border-color:#c7d2fe;background:#f8faff}.help-popup h4{margin:15px 0 5px;font-size:13px}.help-popup ol{margin:7px 0 0;padding-left:20px;color:#52617a;font-size:12px;line-height:1.75}.help-popup .easy{padding:12px 13px;border-radius:13px;background:#eef8ff;border:1px solid #dbeafe;font-size:12px;line-height:1.65;color:#42506a}.help-popup textarea{font-family:inherit;font-size:11.5px;line-height:1.55;background:#f8faff}.recent-qty{display:block;margin-top:3px;color:var(--sub);font-size:10px;font-weight:750;text-align:right}.signal-up{color:#067647}.signal-warn{color:#b45309}.signal-risk{color:#be123c}.signal-neutral{color:#52617a}@media(max-width:760px){.market-signal-grid{grid-template-columns:1fr 1fr}.portfolio-status-grid{grid-template-columns:1fr}}
 .strategy-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.45fr);gap:16px;align-items:start}.strategy-layout .portfolio-status-grid{grid-template-columns:1fr}.strategy-layout .market-action{margin-top:12px}.strategy-layout #marketSignalCard{min-width:0}.strategy-layout #portfolioStatusCard{position:sticky;top:16px}@media(max-width:980px){.strategy-layout{grid-template-columns:1fr}.strategy-layout #portfolioStatusCard{position:static}.strategy-layout .portfolio-status-grid{grid-template-columns:repeat(2,1fr)}}
+.strategy-summary-card .section-head{margin-bottom:8px}.strategy-summary-lines{display:flex;gap:6px;flex-wrap:wrap}.strategy-summary-pill{display:inline-flex;align-items:center;gap:4px;padding:6px 8px;border-radius:9px;background:#f8faff;border:1px solid var(--line);font-size:11px;line-height:1.35;color:#52617a}.strategy-summary-pill b{color:#273550}.strategy-summary-action{margin-top:8px;font-size:12px;line-height:1.5;color:#52617a}.strategy-summary-action b{color:#273550}.strategy-summary-empty{font-size:12px;color:var(--sub)}
 @media(max-width:1120px){.dashboard-grid{grid-template-columns:1fr}.side-stack{grid-template-columns:1fr}.dashboard-insights{grid-template-columns:1fr}.data-table th:nth-child(4),.data-table td:nth-child(4){display:none}}
 @media(max-width:760px){.dashboard-insights{grid-template-columns:1fr}#activitySummaryStats{grid-template-columns:repeat(2,1fr)!important}.app{padding:13px}.top{align-items:flex-start;flex-direction:column}.actions{width:100%}.actions .btn{flex:1 1 auto}.big{font-size:36px}.hero{grid-template-columns:1fr}.donutbox{margin:auto}.side-stack{grid-template-columns:1fr}.settings-layout{grid-template-columns:1fr}.settings-menu{display:flex;overflow:auto}.settings-menu button{width:auto;white-space:nowrap}.data-table{display:none}.mobile-list{display:block}.form-grid{grid-template-columns:1fr}.field.full,.calc{grid-column:1}.inline-form{grid-template-columns:40px minmax(0,1fr) auto}.inline-form select{display:none}.snap-grid{grid-template-columns:1fr}.activity{grid-template-columns:75px minmax(0,1fr)}.activity .amount{grid-column:2}.legend{grid-template-columns:1fr}}
 </style>
@@ -96,6 +97,10 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
         <div class="card side-wide" id="rebalanceCard" style="display:none"><div class="section-head"><h2>목표 비중 대비</h2><span class="hint">설정 → 자산군 관리에서 목표 설정</span></div><div class="summary-list" id="rebalanceList"></div></div>
         <div class="card"><div class="section-head"><h2>큰 자산</h2><button class="mini" data-goto="assets">전체</button></div><div class="summary-list" id="topAssets"></div></div>
         <div class="card"><div class="section-head"><h2>최근 변동메모</h2><button class="mini" data-goto="activity">변동메모</button></div><div class="summary-list" id="recentActivity"></div></div>
+        <div class="card strategy-summary-card">
+          <div class="section-head"><div><h2>투자전략 요약</h2><div class="hint" id="strategySummaryDate">시장 신호 요약</div></div><button class="mini" data-goto="strategy">자세히 보기</button></div>
+          <div id="strategySummaryBody" class="strategy-summary-empty">시장·전략 탭에서 시장 신호를 입력하면 요약이 표시됩니다.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -689,6 +694,30 @@ function ddSignal(el,value,label){
  const n=Number(value),state=n<=-15?"큰 조정":n<=-10?"조정":n<=-5?"조정 중":"고점권";
  el.textContent=`${state} · ${n.toFixed(1)}%`;el.className=n<=-10?"signal-warn":"signal-neutral";
 }
+function marketSummaryJudgment(text,label){
+ const line=String(text||"").split(/\n+/).find(x=>x.replace(/\*\*/g,"").includes(label));
+ if(!line)return "";
+ const bolds=[...line.matchAll(/\*\*(.+?)\*\*/g)].map(m=>m[1].trim()).filter(Boolean);
+ const picked=bolds.find(x=>!x.replace(/[：:]/g,"").includes(label));
+ if(picked)return picked;
+ let plain=line.replace(/\*\*/g,"").replace(new RegExp("^\\s*[-•]?\\s*"+label+"\\s*[：:]?\\s*"),"").trim();
+ return plain.length>24?plain.slice(0,24)+"…":plain;
+}
+function marketSummaryAction(text){
+ const bolds=[...String(text||"").matchAll(/\*\*(.+?)\*\*/g)].map(m=>m[1].trim()).filter(Boolean);
+ if(bolds.length)return bolds[0];
+ const plain=String(text||"").replace(/\*\*/g,"").trim();
+ return plain.length>34?plain.slice(0,34)+"…":plain;
+}
+function renderStrategySummary(){
+ const body=$("strategySummaryBody");if(!body)return;
+ const ms=marketSignalData(),items=[["미국주식",marketSummaryJudgment(ms.diagnosis,"미국주식")],["한국주식",marketSummaryJudgment(ms.diagnosis,"한국주식")],["금/원자재",marketSummaryJudgment(ms.diagnosis,"금/원자재")||marketSummaryJudgment(ms.diagnosis,"금")]].filter(x=>x[1]);
+ const action=marketSummaryAction(ms.action||marketSignalAction(ms));
+ $("strategySummaryDate").textContent=ms.asOf?`기준 ${ms.asOf}`:"시장 신호 요약";
+ if(!items.length&&!ms.action){body.className="strategy-summary-empty";body.textContent="시장·전략 탭에서 시장 신호를 입력하면 요약이 표시됩니다.";return}
+ body.className="";
+ body.innerHTML=`<div class="strategy-summary-lines">${items.map(([label,val])=>`<span class="strategy-summary-pill"><b>${escapeMarketText(label)}</b> ${escapeMarketText(val)}</span>`).join("")}</div>${action?`<div class="strategy-summary-action"><b>현재 행동</b> · ${escapeMarketText(action)}</div>`:""}`;
+}
 function renderMarketSignal(){
  const ms=marketSignalData(),b=ms.breadthPct,y=ms.treasury10y;
  const sb=$("sigBreadth"),sy=$("sigYield");
@@ -703,6 +732,7 @@ function renderMarketSignal(){
  setMarketRichText("sigConditionStatus",ms.conditionStatus||"현재 조건 충족 여부를 입력하세요.");
  const upd=ms.updatedAt?new Date(ms.updatedAt).toLocaleDateString("ko-KR"):"미입력";
  $("marketSignalUpdated").textContent=ms.asOf?`기준 ${ms.asOf} · 입력 ${upd}`:`마지막 입력 ${upd}`;
+ renderStrategySummary();
 }
 function openMarketSignal(){const ms=marketSignalData();$("msAsOf").value=ms.asOf||"";$("msBreadth").value=ms.breadthPct??"";$("msYield").value=ms.treasury10y??"";$("msNasdaqDD").value=ms.nasdaqDrawdown??"";$("msGoldDD").value=ms.goldDrawdown??"";$("msKospiDD").value=ms.kospiDrawdown??"";$("msDiagnosis").value=ms.diagnosis||"";$("msAction").value=ms.action||marketSignalAction(ms);$("msNextCondition").value=ms.nextCondition||"";$("msConditionStatus").value=ms.conditionStatus||"";$("marketSignalDialog").showModal()}
 $("editMarketSignal").onclick=openMarketSignal;$("cancelMarketSignal").onclick=()=>$("marketSignalDialog").close();$("saveMarketSignal").onclick=()=>{state.settings=state.settings||{};state.settings.marketSignal={asOf:$("msAsOf").value,breadthPct:$("msBreadth").value===""?null:Number($("msBreadth").value),treasury10y:$("msYield").value===""?null:Number($("msYield").value),nasdaqDrawdown:$("msNasdaqDD").value===""?null:Number($("msNasdaqDD").value),goldDrawdown:$("msGoldDD").value===""?null:Number($("msGoldDD").value),kospiDrawdown:$("msKospiDD").value===""?null:Number($("msKospiDD").value),diagnosis:$("msDiagnosis").value.trim(),action:$("msAction").value.trim(),nextCondition:$("msNextCondition").value.trim(),conditionStatus:$("msConditionStatus").value.trim(),updatedAt:new Date().toISOString()};$("marketSignalDialog").close();save()};
