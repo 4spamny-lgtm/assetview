@@ -97,7 +97,9 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
             <div class="market-signal-item"><span>나스닥</span><b id="sigNasdaq">미입력</b></div>
           </div>
           <div class="market-action"><span>시장진단</span><b id="sigDiagnosis">지표를 입력하면 시장진단을 기록할 수 있습니다.</b></div>
-          <div class="market-action"><span>현재 행동</span><b id="sigAction">지표를 입력하면 자동 제안합니다.</b></div>
+          <div class="market-action"><span>현재 행동</span><b id="sigAction">지표를 입력하면 현재 행동을 기록할 수 있습니다.</b></div>
+          <div class="market-action"><span>다음 행동 조건</span><b id="sigNextCondition">다음 행동으로 전환할 조건을 입력하세요.</b></div>
+          <div class="market-action"><span>조건 충족 여부</span><b id="sigConditionStatus">현재 조건 충족 여부를 입력하세요.</b></div>
         </div>
         <div class="card" id="portfolioStatusCard">
           <div class="section-head"><div><h2>내 포트폴리오 상태 <button class="help-q" id="portfolioHelpBtn" type="button" aria-label="포트폴리오 판정 기준">?</button></h2><div class="hint">현재 자산 기준 자동 계산</div></div></div>
@@ -348,18 +350,18 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
 3. 미국 10년물 국채수익률(%)
 4. Nasdaq-100 지수의 최근 52주 고점 대비 등락률(%) = 현재값/52주고점-1
 
-시장환경과 첨부한 내 포트폴리오 상태를 함께 고려해서 아래 두 항목도 작성해줘.
+시장환경과 첨부한 내 포트폴리오 상태를 함께 고려해서 아래 4개 항목도 각각 분리해 작성해줘.
 5. 시장진단: 금융 초보도 이해할 수 있게 <b>1~2문장</b>으로 작성해줘. 지수 강도·시장 폭·금리 부담 중 핵심을 포함하고, 약 60~100자 정도로 너무 짧지 않게 적어줘.
-6. 현재 행동: 내 자산구성과 시장환경을 함께 고려해 다음 한 달의 행동을 <b>1~2문장</b>으로 작성해줘. 반드시 <b>① 지금 할 행동 ② 다음 행동으로 전환할 조건 ③ 그 조건이 현재 충족됐는지 여부</b>가 드러나게 적어줘. 무엇을 사고/기다리고/줄일지와 이유를 포함하고, 약 80~140자 정도로 작성해줘.
+6. 현재 행동: 지금부터 다음 한 달 동안 내가 실제로 할 행동만 <b>1~2문장</b>으로 작성해줘. 무엇을 사고/기다리고/줄일지와 이유를 포함하되, 다음 행동 조건이나 충족 여부는 이 칸에 섞지 말아줘.
+7. 다음 행동 조건: 현재 행동을 바꿔 더 적극적으로 매수하거나 대기자금을 투입할 조건을 <b>수치가 포함된 1~2개 조건</b>으로 구체적으로 적어줘. 예: "Nasdaq-100이 52주 고점 대비 -10% 이하로 조정되거나, 미 10년물이 5.0% 아래로 안정되면 성장주 추가매수 검토."
+8. 조건 충족 여부: 위 7번 조건을 오늘 기준 시장수치와 비교해서 <b>충족 / 일부 충족 / 미충족</b> 중 하나로 판단하고, 어떤 조건이 현재 얼마여서 충족 또는 미충족인지 짧게 적어줘.
 
-추가매수나 대기자금 투입 조건이 있다면 수치로 구체화해줘. 예를 들어 Nasdaq-100이나 주요 성장자산이 최근 고점 대비 -10~-15% 조정받았는데 실적·전망 훼손이 뚜렷하지 않다면 "성장주 분할매수 검토"처럼 제안하고, 현재 고점 대비 등락률을 이용해 <b>"현재 -3.2%로 조건 미충족"</b> 또는 <b>"현재 -11.4%로 조건 충족"</b>처럼 이번 달의 충족 여부까지 적어줘. 금리·시장 폭 등 다른 조건을 제안할 때도 가능하면 현재 수치와 비교해서 충족 여부를 알려줘.
+추가매수 조건은 단순히 하락률 하나만으로 기계적으로 정하지 말고, 실적 전망·금리·시장 폭·내 포트폴리오의 성장주 노출과 단일종목 집중도를 함께 고려해줘. 조건을 제안했다면 가능한 한 현재 시장수치로 실제 충족 여부를 확인해줘.
 
-단, 단순히 하락률 하나만으로 기계적으로 매수를 권하지 말고, 실적 전망·금리·시장 폭·내 포트폴리오의 성장주 노출과 단일종목 집중도를 함께 고려해줘.
-
-시장진단과 현재 행동은 AssetView 카드에서 바로 이해할 수 있도록 간결하되, 다음 행동 기준까지 실제로 활용할 수 있을 만큼 구체적으로 적어줘.
+각 문구는 AssetView 카드에서 바로 이해할 수 있도록 간결하고 실행 가능하게 작성해줘.
 
 마지막에는 AssetView에 입력할 값만 아래 순서로 한 번 더 정리해줘.
-기준일 / 200일선 상회비율 / RSP-SPY 추세 / 미국 10년물 / Nasdaq-100 고점대비 / 시장진단 / 현재 행동</textarea>
+기준일 / 200일선 상회비율 / RSP-SPY 추세 / 미국 10년물 / Nasdaq-100 고점대비 / 시장진단 / 현재 행동 / 다음 행동 조건 / 조건 충족 여부</textarea>
   <div class="toolbar" style="margin-top:8px"><button type="button" class="btn" id="copyMarketPrompt">문구 복사</button></div>
   <h4>직접 확인하고 싶다면</h4>
   <ol>
@@ -388,8 +390,10 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
     <div class="field"><label>RSP/SPY 최근 4주 상대추세</label><select class="input" id="msRsp"><option value="down">하락</option><option value="flat">보합</option><option value="up">상승</option></select></div>
     <div class="field"><label>미국 10년물 금리(%)</label><input class="input" id="msYield" type="number" min="0" step="0.01" placeholder="예: 5.31"></div>
     <div class="field"><label>나스닥100 고점 대비 등락률(%)</label><input class="input" id="msNasdaqDD" type="number" max="0" step="0.1" placeholder="예: -0.1"></div>
-    <div class="field full"><label>시장진단</label><textarea class="input" id="msDiagnosis" rows="3" placeholder="예: 지수는 매우 강하지만 상승이 대형 성장주에 집중돼 있고 금리 부담은 높은 시장"></textarea></div>
-    <div class="field full"><label>현재 행동</label><textarea class="input" id="msAction" rows="2" placeholder="예: S&amp;P500은 분할매수하되 KOFR 대기자금은 일부 유지"></textarea></div>
+    <div class="field full"><label>시장진단</label><textarea class="input" id="msDiagnosis" rows="3" placeholder="예: 지수는 고점권이지만 시장 폭이 좁고 금리 부담이 높아 추격매수에는 부담이 있는 시장"></textarea></div>
+    <div class="field full"><label>현재 행동</label><textarea class="input" id="msAction" rows="2" placeholder="예: S&amp;P500은 소액 분할매수하고, 나스닥·엔비디아 추격매수는 자제하며 KOFR 대기자금을 유지"></textarea></div>
+    <div class="field full"><label>다음 행동 조건</label><textarea class="input" id="msNextCondition" rows="2" placeholder="예: Nasdaq-100이 고점 대비 -10% 이하로 조정되거나 미 10년물이 5.0% 아래로 안정되면 성장주 추가매수 검토"></textarea></div>
+    <div class="field full"><label>조건 충족 여부</label><textarea class="input" id="msConditionStatus" rows="2" placeholder="예: 미충족 · Nasdaq-100은 고점권이고 10년물은 5.3%대로 두 조건 모두 아직 충족되지 않음"></textarea></div>
   </div>
   <div class="help" style="margin-top:12px"><b>숫자 찾기가 어렵다면</b> 대시보드의 시장 신호 옆 <b>?</b>를 누르세요. ChatGPT에 그대로 복사할 수 있는 월 1회 확인용 문구를 넣어두었습니다.</div>
   <div class="modal-actions"><button type="button" class="btn" id="cancelMarketSignal">취소</button><button type="button" class="btn primary" id="saveMarketSignal">저장</button></div>
@@ -538,7 +542,7 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
 </div></dialog>
 
 <script>
-const SAMPLE={"version":4,"meta":{"app":"AssetView","currency":"KRW","updatedAt":"","sampleNote":"빈 초기 데이터. JSON 불러오기로 자산 데이터를 입력하세요."},"settings":{"priceApiEndpoint":"","historicalPriceApiEndpoint":"","autoRefreshPrices":false,"marketSignal":{"asOf":"","breadthPct":null,"rspSpyTrend":"flat","treasury10y":null,"nasdaqDrawdown":null,"diagnosis":"","action":"","updatedAt":""}},"accountCategories":[{"id":"acct-general","name":"일반","color":"#3B82F6"},{"id":"acct-isa","name":"ISA","color":"#8B5CF6"},{"id":"acct-pension","name":"연금저축","color":"#14B8A6"},{"id":"acct-irp","name":"IRP","color":"#F59E0B"},{"id":"acct-bank","name":"은행","color":"#06B6D4"}],"assetCategories":[{"id":"cat-equity","name":"주식","color":"#5B5CF0","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-cash","name":"현금(입출금)","color":"#06B6D4","valuationMode":"direct_amount","depositFields":false},{"id":"cat-deposit","name":"예적금","color":"#0EA5E9","valuationMode":"direct_amount","depositFields":true},{"id":"cat-bond","name":"채권","color":"#10B981","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-realestate","name":"부동산","color":"#F59E0B","valuationMode":"direct_amount","depositFields":false},{"id":"cat-fund","name":"펀드·신탁","color":"#EC4899","valuationMode":"direct_amount","depositFields":false},{"id":"cat-alternative","name":"대체자산","color":"#8B5CF6","valuationMode":"direct_amount","depositFields":false},{"id":"cat-other","name":"기타","color":"#64748B","valuationMode":"direct_amount","depositFields":false}],"assetClasses":[{"id":"ac-equity","name":"주식","color":"#5B5CF0","targetPct":null},{"id":"ac-bond","name":"채권","color":"#10B981","targetPct":null},{"id":"ac-cashlike","name":"현금성","color":"#06B6D4","targetPct":null},{"id":"ac-commodity","name":"원자재","color":"#F59E0B","targetPct":null},{"id":"ac-realestate","name":"부동산","color":"#EC4899","targetPct":null},{"id":"ac-other","name":"기타","color":"#64748B","targetPct":null}],"accounts":[],"assets":[],"activityLog":[],"monthlySnapshots":[],"notes":[],"reconstructedTrades":[]},KEY="assetview.sample.v6";
+const SAMPLE={"version":4,"meta":{"app":"AssetView","currency":"KRW","updatedAt":"","sampleNote":"빈 초기 데이터. JSON 불러오기로 자산 데이터를 입력하세요."},"settings":{"priceApiEndpoint":"","historicalPriceApiEndpoint":"","autoRefreshPrices":false,"marketSignal":{"asOf":"","breadthPct":null,"rspSpyTrend":"flat","treasury10y":null,"nasdaqDrawdown":null,"diagnosis":"","action":"","nextCondition":"","conditionStatus":"","updatedAt":""}},"accountCategories":[{"id":"acct-general","name":"일반","color":"#3B82F6"},{"id":"acct-isa","name":"ISA","color":"#8B5CF6"},{"id":"acct-pension","name":"연금저축","color":"#14B8A6"},{"id":"acct-irp","name":"IRP","color":"#F59E0B"},{"id":"acct-bank","name":"은행","color":"#06B6D4"}],"assetCategories":[{"id":"cat-equity","name":"주식","color":"#5B5CF0","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-cash","name":"현금(입출금)","color":"#06B6D4","valuationMode":"direct_amount","depositFields":false},{"id":"cat-deposit","name":"예적금","color":"#0EA5E9","valuationMode":"direct_amount","depositFields":true},{"id":"cat-bond","name":"채권","color":"#10B981","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-realestate","name":"부동산","color":"#F59E0B","valuationMode":"direct_amount","depositFields":false},{"id":"cat-fund","name":"펀드·신탁","color":"#EC4899","valuationMode":"direct_amount","depositFields":false},{"id":"cat-alternative","name":"대체자산","color":"#8B5CF6","valuationMode":"direct_amount","depositFields":false},{"id":"cat-other","name":"기타","color":"#64748B","valuationMode":"direct_amount","depositFields":false}],"assetClasses":[{"id":"ac-equity","name":"주식","color":"#5B5CF0","targetPct":null},{"id":"ac-bond","name":"채권","color":"#10B981","targetPct":null},{"id":"ac-cashlike","name":"현금성","color":"#06B6D4","targetPct":null},{"id":"ac-commodity","name":"원자재","color":"#F59E0B","targetPct":null},{"id":"ac-realestate","name":"부동산","color":"#EC4899","targetPct":null},{"id":"ac-other","name":"기타","color":"#64748B","targetPct":null}],"accounts":[],"assets":[],"activityLog":[],"monthlySnapshots":[],"notes":[],"reconstructedTrades":[]},KEY="assetview.sample.v6";
 class LocalRepository{getData(){const x=localStorage.getItem(KEY);return x?JSON.parse(x):structuredClone(SAMPLE)}saveData(x){x.meta=x.meta||{};x.meta.updatedAt=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(x))}}
 const repo=new LocalRepository();let state=repo.getData(),dashMode="current",page=1,parsedAI=null,assetSort={key:"value",dir:"desc"},accountSort={key:"value",dir:"desc"};
 const $=x=>document.getElementById(x), esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
@@ -562,7 +566,7 @@ function classifyAssetClass(a){const t=(a.tags||[]).map(x=>String(x).toLowerCase
 function ensureAssetClassFields(){
   state.notes=state.notes||[];
   state.settings=state.settings||{};
-  state.settings.marketSignal=state.settings.marketSignal||{breadthPct:null,rspSpyTrend:"flat",treasury10y:null,nasdaqDrawdown:null,note:"",updatedAt:""};
+  state.settings.marketSignal=state.settings.marketSignal||{breadthPct:null,rspSpyTrend:"flat",treasury10y:null,nasdaqDrawdown:null,note:"",diagnosis:"",action:"",nextCondition:"",conditionStatus:"",updatedAt:""};
   if(state.notes.length===0&&SAMPLE.notes?.length)state.notes=structuredClone(SAMPLE.notes);
   state.assetClasses=state.assetClasses||structuredClone(SAMPLE.assetClasses);
   state.assetClasses.forEach(c=>{if(c.targetPct===undefined)c.targetPct=null});
@@ -639,7 +643,7 @@ function renderPortfolioStatus(){
  if(growthPct>=40&&cashPct>=15&&concPct>=20&&concPct<30)action="성장주 노출·단일종목 집중이 높음 · 신규자금은 S&P500/현금성으로 균형";
  $("pfAction").textContent=action;
 }
-function marketSignalData(){const ms=state.settings?.marketSignal||{};return{breadthPct:ms.breadthPct??null,rspSpyTrend:ms.rspSpyTrend||"flat",treasury10y:ms.treasury10y??null,nasdaqDrawdown:ms.nasdaqDrawdown??null,asOf:ms.asOf||"",diagnosis:ms.diagnosis||ms.note||"",action:ms.action||"",updatedAt:ms.updatedAt||""}}
+function marketSignalData(){const ms=state.settings?.marketSignal||{};return{breadthPct:ms.breadthPct??null,rspSpyTrend:ms.rspSpyTrend||"flat",treasury10y:ms.treasury10y??null,nasdaqDrawdown:ms.nasdaqDrawdown??null,asOf:ms.asOf||"",diagnosis:ms.diagnosis||ms.note||"",action:ms.action||"",nextCondition:ms.nextCondition||"",conditionStatus:ms.conditionStatus||"",updatedAt:ms.updatedAt||""}}
 function marketSignalAction(ms){
  const b=Number(ms.breadthPct),y=Number(ms.treasury10y),d=Number(ms.nasdaqDrawdown);
  const hasB=ms.breadthPct!==null&&ms.breadthPct!==""&&!Number.isNaN(b),hasY=ms.treasury10y!==null&&ms.treasury10y!==""&&!Number.isNaN(y),hasD=ms.nasdaqDrawdown!==null&&ms.nasdaqDrawdown!==""&&!Number.isNaN(d);
@@ -657,11 +661,13 @@ function renderMarketSignal(){
  if(d===null||d===""){sn.textContent="미입력";sn.className="signal-neutral"}else{const n=Number(d),lab=n<=-10?"조정":n<=-5?"조정 중":"강세";sn.textContent=`${lab} · 고점대비 ${n.toFixed(1)}%`;sn.className=n<=-10?"signal-up":n<=-5?"signal-warn":"signal-up"}
  $("sigDiagnosis").textContent=ms.diagnosis||"시장진단을 입력하세요.";
  $("sigAction").textContent=ms.action||marketSignalAction(ms);
+ $("sigNextCondition").textContent=ms.nextCondition||"다음 행동으로 전환할 조건을 입력하세요.";
+ $("sigConditionStatus").textContent=ms.conditionStatus||"현재 조건 충족 여부를 입력하세요.";
  const upd=ms.updatedAt?new Date(ms.updatedAt).toLocaleDateString("ko-KR"):"미입력";
  $("marketSignalUpdated").textContent=ms.asOf?`기준 ${ms.asOf} · 입력 ${upd}`:`마지막 입력 ${upd}`;
 }
-function openMarketSignal(){const ms=marketSignalData();$("msAsOf").value=ms.asOf||"";$("msBreadth").value=ms.breadthPct??"";$("msRsp").value=ms.rspSpyTrend||"flat";$("msYield").value=ms.treasury10y??"";$("msNasdaqDD").value=ms.nasdaqDrawdown??"";$("msDiagnosis").value=ms.diagnosis||"";$("msAction").value=ms.action||marketSignalAction(ms);$("marketSignalDialog").showModal()}
-$("editMarketSignal").onclick=openMarketSignal;$("cancelMarketSignal").onclick=()=>$("marketSignalDialog").close();$("saveMarketSignal").onclick=()=>{state.settings=state.settings||{};state.settings.marketSignal={asOf:$("msAsOf").value,breadthPct:$("msBreadth").value===""?null:Number($("msBreadth").value),rspSpyTrend:$("msRsp").value,treasury10y:$("msYield").value===""?null:Number($("msYield").value),nasdaqDrawdown:$("msNasdaqDD").value===""?null:Number($("msNasdaqDD").value),diagnosis:$("msDiagnosis").value.trim(),action:$("msAction").value.trim(),updatedAt:new Date().toISOString()};$("marketSignalDialog").close();save()};
+function openMarketSignal(){const ms=marketSignalData();$("msAsOf").value=ms.asOf||"";$("msBreadth").value=ms.breadthPct??"";$("msRsp").value=ms.rspSpyTrend||"flat";$("msYield").value=ms.treasury10y??"";$("msNasdaqDD").value=ms.nasdaqDrawdown??"";$("msDiagnosis").value=ms.diagnosis||"";$("msAction").value=ms.action||marketSignalAction(ms);$("msNextCondition").value=ms.nextCondition||"";$("msConditionStatus").value=ms.conditionStatus||"";$("marketSignalDialog").showModal()}
+$("editMarketSignal").onclick=openMarketSignal;$("cancelMarketSignal").onclick=()=>$("marketSignalDialog").close();$("saveMarketSignal").onclick=()=>{state.settings=state.settings||{};state.settings.marketSignal={asOf:$("msAsOf").value,breadthPct:$("msBreadth").value===""?null:Number($("msBreadth").value),rspSpyTrend:$("msRsp").value,treasury10y:$("msYield").value===""?null:Number($("msYield").value),nasdaqDrawdown:$("msNasdaqDD").value===""?null:Number($("msNasdaqDD").value),diagnosis:$("msDiagnosis").value.trim(),action:$("msAction").value.trim(),nextCondition:$("msNextCondition").value.trim(),conditionStatus:$("msConditionStatus").value.trim(),updatedAt:new Date().toISOString()};$("marketSignalDialog").close();save()};
 $("marketHelpBtn").onclick=()=>$("marketHelpDialog").showModal();$("portfolioHelpBtn").onclick=()=>$("portfolioHelpDialog").showModal();$("closeMarketHelp").onclick=()=>$("marketHelpDialog").close();$("closePortfolioHelp").onclick=()=>$("portfolioHelpDialog").close();$("copyMarketPrompt").onclick=async()=>{try{await navigator.clipboard.writeText($("marketPromptText").value);$("copyMarketPrompt").textContent="복사됨";setTimeout(()=>$("copyMarketPrompt").textContent="문구 복사",1200)}catch(e){$("marketPromptText").select();document.execCommand("copy")}};
 
 function fillMonths(){const ms=[...state.monthlySnapshots].sort((a,b)=>b.month.localeCompare(a.month)),old=$("monthSelect").value;$("monthSelect").innerHTML=ms.map(s=>`<option value="${s.month}">${s.month}</option>`).join("");if(ms.some(s=>s.month===old))$("monthSelect").value=old;$("monthSelect").style.display=dashMode==="month"?"inline-block":"none"}
