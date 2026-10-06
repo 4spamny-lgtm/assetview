@@ -28,7 +28,7 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1
 .change-card{margin-top:16px}.change-controls{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.change-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}.change-stat{padding:13px;border:1px solid var(--line);border-radius:14px;background:#fbfcff}.change-stat span{font-size:11px;color:var(--sub);font-weight:850}.change-stat b{display:block;font-size:19px;margin-top:4px}.change-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px}.change-table{width:100%;border-collapse:collapse;min-width:760px}.change-table th{background:#f8faff;color:#74829b;font-size:12px;text-align:left;padding:11px;border-bottom:1px solid var(--line);font-weight:900;position:sticky;top:0}.change-table td{padding:11px;border-bottom:1px solid #eef2f7;font-size:13px}.change-table tr:last-child td{border-bottom:0}.change-table .r{text-align:right;white-space:nowrap}.pos{color:#067647}.negv{color:#be123c}.flat{color:#64748b}@media(max-width:760px){.change-summary{grid-template-columns:repeat(2,1fr)}}
 dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));max-height:90vh;box-shadow:0 30px 90px rgba(20,30,55,.28)}dialog::backdrop{background:rgba(22,30,52,.42);backdrop-filter:blur(3px)}.modal{padding:20px;max-height:90vh;overflow:auto}.modal h3{margin:0 0 4px;font-size:20px}.modal p{margin:0 0 15px;font-size:12px;line-height:1.6;color:var(--sub)}.modal-actions{display:flex;gap:7px;justify-content:flex-end;margin-top:16px}.calc{grid-column:1/-1;padding:11px 12px;border-radius:12px;background:linear-gradient(135deg,#eef2ff,#ecfeff);display:flex;justify-content:space-between;align-items:center;font-size:13px}.calc b{font-size:19px}.preview{max-height:270px;overflow:auto;border:1px solid var(--line);border-radius:12px;margin-top:10px}.preview-row{display:grid;grid-template-columns:minmax(0,1fr) 100px 110px;gap:8px;padding:9px 10px;border-bottom:1px solid #eef2f7;font-size:12px}.preview-row:last-child{border-bottom:0}.ok{color:#067647}.warn{color:#b45309}.confidence{display:inline-flex;padding:4px 7px;border-radius:999px;font-size:11px;font-weight:900}.confidence.high{background:#ecfdf3;color:#067647}.confidence.medium{background:#fff7ed;color:#b45309}.confidence.low{background:#fff1f2;color:#be123c}.confidence.manual{background:#eef2ff;color:#4f46e5}.file{display:none}
 
-.market-signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.market-signal-item{padding:11px;border:1px solid var(--line);border-radius:13px;background:#fbfcff}.market-signal-item span{display:block;font-size:11px;color:var(--sub);font-weight:850}.market-signal-item b{display:block;font-size:15px;margin-top:4px}.market-action{margin-top:10px;padding:12px 13px;border-radius:13px;background:linear-gradient(135deg,#eef2ff,#ecfeff);font-size:13px;line-height:1.45}.market-action span{display:block;font-size:11px;color:var(--sub);font-weight:850;margin-bottom:3px}.market-action b{font-size:14px}.portfolio-status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}.portfolio-status-item{padding:11px;border:1px solid var(--line);border-radius:13px;background:#fbfcff}.portfolio-status-item span{display:block;font-size:11px;color:var(--sub);font-weight:850}.portfolio-status-item b{display:block;font-size:15px;margin-top:4px}.portfolio-status-item small{display:block;font-size:10px;color:var(--sub);margin-top:3px}.criteria-note{margin-top:8px;font-size:9.5px;line-height:1.55;color:var(--sub)}.criteria-note b{color:#52617a}.help-q{display:inline-grid;place-items:center;width:18px;height:18px;margin-left:4px;padding:0;border:1px solid #dbe3f0;border-radius:50%;background:#fff;color:#64748b;font-size:11px;font-weight:950;vertical-align:2px;cursor:pointer}.help-q:hover{color:#4f46e5;border-color:#c7d2fe;background:#f8faff}.help-popup h4{margin:15px 0 5px;font-size:13px}.help-popup ol{margin:7px 0 0;padding-left:20px;color:#52617a;font-size:12px;line-height:1.75}.help-popup .easy{padding:12px 13px;border-radius:13px;background:#eef8ff;border:1px solid #dbeafe;font-size:12px;line-height:1.65;color:#42506a}.help-popup textarea{font-family:inherit;font-size:11.5px;line-height:1.55;background:#f8faff}.recent-qty{display:block;margin-top:3px;color:var(--sub);font-size:10px;font-weight:750;text-align:right}.signal-up{color:#067647}.signal-warn{color:#b45309}.signal-risk{color:#be123c}.signal-neutral{color:#52617a}@media(max-width:760px){.market-signal-grid,.portfolio-status-grid{grid-template-columns:1fr 1fr}}
+.market-signal-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}.market-signal-item{padding:11px;border:1px solid var(--line);border-radius:13px;background:#fbfcff}.market-signal-item span{display:block;font-size:11px;color:var(--sub);font-weight:850}.market-signal-item b{display:block;font-size:15px;margin-top:4px}.market-action{margin-top:10px;padding:12px 13px;border-radius:13px;background:linear-gradient(135deg,#eef2ff,#ecfeff);font-size:13px;line-height:1.45}.market-action span{display:block;font-size:11px;color:var(--sub);font-weight:850;margin-bottom:3px}.market-action .market-action-text{font-size:14px;font-weight:400}.market-action .market-action-text strong{font-weight:800}.portfolio-status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}.portfolio-status-item{padding:11px;border:1px solid var(--line);border-radius:13px;background:#fbfcff}.portfolio-status-item span{display:block;font-size:11px;color:var(--sub);font-weight:850}.portfolio-status-item b{display:block;font-size:15px;margin-top:4px}.portfolio-status-item small{display:block;font-size:10px;color:var(--sub);margin-top:3px}.criteria-note{margin-top:8px;font-size:9.5px;line-height:1.55;color:var(--sub)}.criteria-note b{color:#52617a}.help-q{display:inline-grid;place-items:center;width:18px;height:18px;margin-left:4px;padding:0;border:1px solid #dbe3f0;border-radius:50%;background:#fff;color:#64748b;font-size:11px;font-weight:950;vertical-align:2px;cursor:pointer}.help-q:hover{color:#4f46e5;border-color:#c7d2fe;background:#f8faff}.help-popup h4{margin:15px 0 5px;font-size:13px}.help-popup ol{margin:7px 0 0;padding-left:20px;color:#52617a;font-size:12px;line-height:1.75}.help-popup .easy{padding:12px 13px;border-radius:13px;background:#eef8ff;border:1px solid #dbeafe;font-size:12px;line-height:1.65;color:#42506a}.help-popup textarea{font-family:inherit;font-size:11.5px;line-height:1.55;background:#f8faff}.recent-qty{display:block;margin-top:3px;color:var(--sub);font-size:10px;font-weight:750;text-align:right}.signal-up{color:#067647}.signal-warn{color:#b45309}.signal-risk{color:#be123c}.signal-neutral{color:#52617a}@media(max-width:760px){.market-signal-grid,.portfolio-status-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:1120px){.dashboard-grid{grid-template-columns:1fr}.side-stack{grid-template-columns:1fr}.dashboard-insights{grid-template-columns:repeat(2,minmax(0,1fr))}.data-table th:nth-child(4),.data-table td:nth-child(4){display:none}}
 @media(max-width:760px){.dashboard-insights{grid-template-columns:1fr}#activitySummaryStats{grid-template-columns:repeat(2,1fr)!important}.app{padding:13px}.top{align-items:flex-start;flex-direction:column}.actions{width:100%}.actions .btn{flex:1 1 auto}.big{font-size:36px}.hero{grid-template-columns:1fr}.donutbox{margin:auto}.side-stack{grid-template-columns:1fr}.settings-layout{grid-template-columns:1fr}.settings-menu{display:flex;overflow:auto}.settings-menu button{width:auto;white-space:nowrap}.data-table{display:none}.mobile-list{display:block}.form-grid{grid-template-columns:1fr}.field.full,.calc{grid-column:1}.inline-form{grid-template-columns:40px minmax(0,1fr) auto}.inline-form select{display:none}.snap-grid{grid-template-columns:1fr}.activity{grid-template-columns:75px minmax(0,1fr)}.activity .amount{grid-column:2}.legend{grid-template-columns:1fr}}
 </style>
@@ -92,14 +92,16 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
         <div class="card" id="marketSignalCard">
           <div class="section-head"><div><h2>시장 신호 <button class="help-q" id="marketHelpBtn" type="button" aria-label="시장 신호 확인 방법">?</button></h2><div class="hint" id="marketSignalUpdated">월 1회 직접 입력</div></div><button class="mini" id="editMarketSignal">수정</button></div>
           <div class="market-signal-grid">
-            <div class="market-signal-item"><span>시장 폭</span><b id="sigBreadth">미입력</b></div>
+            <div class="market-signal-item"><span>S&amp;P500 시장폭</span><b id="sigBreadth">미입력</b></div>
             <div class="market-signal-item"><span>미 10년물</span><b id="sigYield">미입력</b></div>
-            <div class="market-signal-item"><span>나스닥</span><b id="sigNasdaq">미입력</b></div>
+            <div class="market-signal-item"><span>나스닥100</span><b id="sigNasdaq">미입력</b></div>
+            <div class="market-signal-item"><span>금</span><b id="sigGold">미입력</b></div>
+            <div class="market-signal-item"><span>KOSPI</span><b id="sigKospi">미입력</b></div>
           </div>
-          <div class="market-action"><span>시장진단</span><b id="sigDiagnosis">지표를 입력하면 시장진단을 기록할 수 있습니다.</b></div>
-          <div class="market-action"><span>현재 행동</span><b id="sigAction">지표를 입력하면 현재 행동을 기록할 수 있습니다.</b></div>
-          <div class="market-action"><span>다음 행동 조건</span><b id="sigNextCondition">다음 행동으로 전환할 조건을 입력하세요.</b></div>
-          <div class="market-action"><span>조건 충족 여부</span><b id="sigConditionStatus">현재 조건 충족 여부를 입력하세요.</b></div>
+          <div class="market-action"><span>시장진단</span><div class="market-action-text" id="sigDiagnosis">지표를 입력하면 시장진단을 기록할 수 있습니다.</div></div>
+          <div class="market-action"><span>현재 행동</span><div class="market-action-text" id="sigAction">지표를 입력하면 현재 행동을 기록할 수 있습니다.</div></div>
+          <div class="market-action"><span>다음 행동 조건</span><div class="market-action-text" id="sigNextCondition">다음 행동으로 전환할 조건을 입력하세요.</div></div>
+          <div class="market-action"><span>조건 충족 여부</span><div class="market-action-text" id="sigConditionStatus">현재 조건 충족 여부를 입력하세요.</div></div>
         </div>
         <div class="card" id="portfolioStatusCard">
           <div class="section-head"><div><h2>내 포트폴리오 상태 <button class="help-q" id="portfolioHelpBtn" type="button" aria-label="포트폴리오 판정 기준">?</button></h2><div class="hint">현재 자산 기준 자동 계산</div></div></div>
@@ -341,34 +343,37 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
   <p>매달 직접 금융지표를 찾기보다, <b>직전 월말에 내보낸 AssetView JSON을 함께 첨부</b>하고 아래 문구를 ChatGPT에 붙여넣는 방식이 가장 쉽습니다.</p>
   <div class="easy"><b>추천 월간 루틴</b><br>① 월말에 자산을 업데이트하고 월말 기록 저장<br>② JSON 내보내기<br>③ 다음 달 초 새 채팅에 그 JSON을 첨부하고 아래 문구를 복사<br>④ 받은 값을 ‘시장 신호 → 수정’에 입력하고 다음 달까지 유지</div>
   <h4>ChatGPT에 복사할 문구</h4>
-  <textarea class="input" id="marketPromptText" rows="12" readonly>첨부한 AssetView JSON은 직전 월말 기준 내 자산현황이야. 먼저 이 파일에서 내 운용자산 구성, 성장주 노출, 현금성 비중, 단일종목 집중도 등을 파악해줘.
+  <textarea class="input" id="marketPromptText" rows="16" readonly>첨부한 AssetView JSON은 직전 월말 기준 내 자산현황이야. 먼저 이 파일에서 내 운용자산 구성, 성장주 노출, 현금성 비중, 단일종목 집중도, 미국주식·한국주식·금/원자재·채권/현금성 자산의 보유 비중을 파악해줘.
 
-그다음 오늘 기준 최신 웹자료를 확인해서 아래 4개 시장 신호를 알려줘. 각 항목은 기준일과 출처도 같이 적어줘.
+그다음 오늘 기준 최신 웹자료를 확인해서 아래 5개 시장 신호를 알려줘. 각 항목은 기준일과 신뢰할 수 있는 출처도 같이 적어줘.
 
 1. S&amp;P500 구성종목 중 200일 이동평균선 위에 있는 종목의 비율(%)
-2. RSP/SPY 비율의 최근 4주 상대추세: 상승/보합/하락 (최근 4주 변화율이 +1% 이상이면 상승, -1%~+1%면 보합, -1% 이하면 하락으로 분류)
-3. 미국 10년물 국채수익률(%)
-4. Nasdaq-100 지수의 최근 52주 고점 대비 등락률(%) = 현재값/52주고점-1
+2. 미국 10년물 국채수익률(%)
+3. Nasdaq-100 지수의 최근 52주 고점 대비 등락률(%) = 현재값/52주고점-1
+4. 금 가격의 최근 52주 고점 대비 등락률(%) = 현재값/52주고점-1
+5. KOSPI 지수의 최근 52주 고점 대비 등락률(%) = 현재값/52주고점-1
 
-시장환경과 첨부한 내 포트폴리오 상태를 함께 고려해서 아래 4개 항목도 각각 분리해 작성해줘.
-5. 시장진단: 금융 초보도 이해할 수 있게 <b>1~2문장</b>으로 작성해줘. 지수 강도·시장 폭·금리 부담 중 핵심을 포함하고, 약 60~100자 정도로 너무 짧지 않게 적어줘.
-6. 현재 행동: 지금부터 다음 한 달 동안 내가 실제로 할 행동만 <b>1~2문장</b>으로 작성해줘. 무엇을 사고/기다리고/줄일지와 이유를 포함하되, 다음 행동 조건이나 충족 여부는 이 칸에 섞지 말아줘.
-7. 다음 행동 조건: 현재 행동을 바꿔 더 적극적으로 매수하거나 대기자금을 투입할 조건을 <b>수치가 포함된 1~2개 조건</b>으로 구체적으로 적어줘. 예: "Nasdaq-100이 52주 고점 대비 -10% 이하로 조정되거나, 미 10년물이 5.0% 아래로 안정되면 성장주 추가매수 검토."
-8. 조건 충족 여부: 위 7번 조건을 오늘 기준 시장수치와 비교해서 <b>충족 / 일부 충족 / 미충족</b> 중 하나로 판단하고, 어떤 조건이 현재 얼마여서 충족 또는 미충족인지 짧게 적어줘.
+시장환경과 첨부한 내 포트폴리오 상태를 함께 고려해서 아래 4개 항목도 각각 분리해 작성해줘. 미국주식에만 한정하지 말고, 내가 실제 보유한 미국주식·한국주식·금/원자재·채권·현금성 자산 중 어디를 유지·추가매수·대기할지 우선순위를 제안해줘.
 
-추가매수 조건은 단순히 하락률 하나만으로 기계적으로 정하지 말고, 실적 전망·금리·시장 폭·내 포트폴리오의 성장주 노출과 단일종목 집중도를 함께 고려해줘. 조건을 제안했다면 가능한 한 현재 시장수치로 실제 충족 여부를 확인해줘.
+6. 시장진단: 금융 초보도 이해할 수 있게 1~2문장, 약 70~130자 정도로 작성해줘. 미국주식의 가격 부담과 시장 폭, 금리뿐 아니라 금과 KOSPI의 조정 정도도 함께 비교해서 현재 어느 자산이 상대적으로 부담스럽고 어느 자산이 가격 부담이 낮아졌는지 설명해줘.
+7. 현재 행동: 지금부터 다음 한 달 동안 내가 실제로 할 행동만 1~3문장으로 작성해줘. 내 실제 보유비중과 집중도를 고려해 미국주식·한국주식·금/원자재·채권·현금성 중 무엇을 사고, 유지하고, 기다릴지 이유와 함께 우선순위를 제안해줘. 다음 행동 조건이나 충족 여부는 이 칸에 섞지 말아줘.
+8. 다음 행동 조건: 현재 행동을 바꿔 더 적극적으로 매수하거나 대기자금을 투입할 조건을 1~3개 제안해줘. 가능하면 Nasdaq-100·금·KOSPI의 고점 대비 조정폭, 미국 10년물 금리, S&amp;P500 시장폭 등 실제로 매달 확인할 수 있는 수치를 사용해 구체적으로 적어줘.
+9. 조건 충족 여부: 위 8번의 각 조건을 오늘 기준 시장수치와 비교해서 충족 / 일부 충족 / 미충족 중 하나로 판단하고, 현재 수치를 함께 적어줘. 내가 별도로 차트를 찾아보지 않아도 되도록 조건 충족 여부를 네가 직접 계산해서 알려줘.
 
-각 문구는 AssetView 카드에서 바로 이해할 수 있도록 간결하고 실행 가능하게 작성해줘.
+추가매수 조건은 단순히 하락률 하나만으로 기계적으로 정하지 말고, 실적 전망·금리·시장 폭·자산별 추세·내 포트폴리오의 집중도를 함께 고려해줘. 특정 자산이 많이 하락했더라도 펀더멘털 훼손이나 추세 악화가 크다면 단순 저가매수로 권하지 말아줘.
+
+시장진단·현재 행동·다음 행동 조건·조건 충족 여부는 기본적으로 일반 문장으로 작성해줘. 특별히 강조할 핵심 숫자나 판단이 있을 때만 **이런 식으로** 일부 단어를 굵게 표시해줘. 문장 전체를 굵게 쓰지는 말아줘.
 
 마지막에는 AssetView에 입력할 값만 아래 순서로 한 번 더 정리해줘.
-기준일 / 200일선 상회비율 / RSP-SPY 추세 / 미국 10년물 / Nasdaq-100 고점대비 / 시장진단 / 현재 행동 / 다음 행동 조건 / 조건 충족 여부</textarea>
+기준일 / S&amp;P500 200일선 상회비율 / 미국 10년물 / Nasdaq-100 고점대비 / 금 고점대비 / KOSPI 고점대비 / 시장진단 / 현재 행동 / 다음 행동 조건 / 조건 충족 여부</textarea>
   <div class="toolbar" style="margin-top:8px"><button type="button" class="btn" id="copyMarketPrompt">문구 복사</button></div>
   <h4>직접 확인하고 싶다면</h4>
   <ol>
-    <li><b>200일선 상회비율</b>: 검색창에 “S&amp;P 500 percent above 200 day moving average”라고 검색해 나온 최신 비율을 입력합니다.</li>
-    <li><b>RSP/SPY</b>: 직접 차트를 읽기 어렵다면 위 ChatGPT 문구로 확인하는 것을 권합니다. 여기서는 ‘미국 증시 상승이 빅테크 밖으로 퍼지는지’를 보는 값입니다.</li>
-    <li><b>미국 10년물</b>: 검색창에 “US 10 year treasury yield”라고 검색하면 나오는 수익률(%)을 입력합니다.</li>
-    <li><b>나스닥100 고점 대비</b>: 직접 계산하지 말고 위 문구로 요청하면 됩니다. 0%에 가까우면 고점 부근, -10%면 고점보다 10% 내려온 상태입니다. ChatGPT가 현재 조정폭을 계산하고, 제안한 매수 조건이 이번 달에 충족됐는지도 함께 판단하도록 요청합니다.</li>
+    <li><b>S&amp;P500 200일선 상회비율</b>: 미국 증시가 일부 대형주만 오르는지, 시장 전반이 함께 오르는지를 보는 시장 폭 지표입니다.</li>
+    <li><b>미국 10년물</b>: 주식·채권의 할인율 부담을 보는 핵심 금리입니다. 높을수록 고평가 성장주에는 부담이 커질 수 있습니다.</li>
+    <li><b>Nasdaq-100 고점 대비</b>: 0%에 가까우면 고점권, -10%면 최근 52주 고점보다 10% 내려온 상태입니다.</li>
+    <li><b>금 고점 대비</b>: 금이 고점권인지 충분히 조정받았는지 비교하는 값입니다. 금리·달러 흐름과 함께 해석합니다.</li>
+    <li><b>KOSPI 고점 대비</b>: 국내주식의 가격 부담과 조정 정도를 간단히 비교하는 값입니다. 환율·반도체 업황 등도 함께 고려합니다.</li>
   </ol>
   <div class="help" style="margin-top:12px"><b>월 1회면 충분한 이유</b> · 이 카드는 단기매매 신호가 아니라 자산배분 방향을 보는 용도입니다. 월중 하루 이틀의 움직임보다 월말 기준으로 같은 방식으로 기록하는 것이 더 유용합니다.</div>
   <div class="modal-actions"><button type="button" class="btn primary" id="closeMarketHelp">확인</button></div>
@@ -387,14 +392,16 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
   <div class="form-grid">
     <div class="field"><label>기준일</label><input class="input" id="msAsOf" type="date"></div>
     <div class="field"><label>S&amp;P500 200일선 상회 종목 비율(%)</label><input class="input" id="msBreadth" type="number" min="0" max="100" step="0.1" placeholder="예: 43.4"></div>
-    <div class="field"><label>RSP/SPY 최근 4주 상대추세</label><select class="input" id="msRsp"><option value="down">하락</option><option value="flat">보합</option><option value="up">상승</option></select></div>
     <div class="field"><label>미국 10년물 금리(%)</label><input class="input" id="msYield" type="number" min="0" step="0.01" placeholder="예: 5.31"></div>
-    <div class="field"><label>나스닥100 고점 대비 등락률(%)</label><input class="input" id="msNasdaqDD" type="number" max="0" step="0.1" placeholder="예: -0.1"></div>
+    <div class="field"><label>Nasdaq-100 52주 고점 대비(%)</label><input class="input" id="msNasdaqDD" type="number" max="0" step="0.1" placeholder="예: -0.1"></div>
+    <div class="field"><label>금 52주 고점 대비(%)</label><input class="input" id="msGoldDD" type="number" max="0" step="0.1" placeholder="예: -6.2"></div>
+    <div class="field"><label>KOSPI 52주 고점 대비(%)</label><input class="input" id="msKospiDD" type="number" max="0" step="0.1" placeholder="예: -8.4"></div>
     <div class="field full"><label>시장진단</label><textarea class="input" id="msDiagnosis" rows="3" placeholder="예: 지수는 고점권이지만 시장 폭이 좁고 금리 부담이 높아 추격매수에는 부담이 있는 시장"></textarea></div>
     <div class="field full"><label>현재 행동</label><textarea class="input" id="msAction" rows="2" placeholder="예: S&amp;P500은 소액 분할매수하고, 나스닥·엔비디아 추격매수는 자제하며 KOFR 대기자금을 유지"></textarea></div>
     <div class="field full"><label>다음 행동 조건</label><textarea class="input" id="msNextCondition" rows="2" placeholder="예: Nasdaq-100이 고점 대비 -10% 이하로 조정되거나 미 10년물이 5.0% 아래로 안정되면 성장주 추가매수 검토"></textarea></div>
     <div class="field full"><label>조건 충족 여부</label><textarea class="input" id="msConditionStatus" rows="2" placeholder="예: 미충족 · Nasdaq-100은 고점권이고 10년물은 5.3%대로 두 조건 모두 아직 충족되지 않음"></textarea></div>
   </div>
+  <div class="help" style="margin-top:10px">문장은 기본적으로 일반 글씨로 표시됩니다. 필요한 부분만 <b>**별표 두 개**</b>로 감싸면 대시보드에서 굵게 표시됩니다. 예: <code>현재 **금리 부담이 높음**</code></div>
   <div class="help" style="margin-top:12px"><b>숫자 찾기가 어렵다면</b> 대시보드의 시장 신호 옆 <b>?</b>를 누르세요. ChatGPT에 그대로 복사할 수 있는 월 1회 확인용 문구를 넣어두었습니다.</div>
   <div class="modal-actions"><button type="button" class="btn" id="cancelMarketSignal">취소</button><button type="button" class="btn primary" id="saveMarketSignal">저장</button></div>
 </div></dialog>
@@ -542,7 +549,7 @@ dialog{border:0;border-radius:22px;padding:0;width:min(650px,calc(100% - 24px));
 </div></dialog>
 
 <script>
-const SAMPLE={"version":4,"meta":{"app":"AssetView","currency":"KRW","updatedAt":"","sampleNote":"빈 초기 데이터. JSON 불러오기로 자산 데이터를 입력하세요."},"settings":{"priceApiEndpoint":"","historicalPriceApiEndpoint":"","autoRefreshPrices":false,"marketSignal":{"asOf":"","breadthPct":null,"rspSpyTrend":"flat","treasury10y":null,"nasdaqDrawdown":null,"diagnosis":"","action":"","nextCondition":"","conditionStatus":"","updatedAt":""}},"accountCategories":[{"id":"acct-general","name":"일반","color":"#3B82F6"},{"id":"acct-isa","name":"ISA","color":"#8B5CF6"},{"id":"acct-pension","name":"연금저축","color":"#14B8A6"},{"id":"acct-irp","name":"IRP","color":"#F59E0B"},{"id":"acct-bank","name":"은행","color":"#06B6D4"}],"assetCategories":[{"id":"cat-equity","name":"주식","color":"#5B5CF0","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-cash","name":"현금(입출금)","color":"#06B6D4","valuationMode":"direct_amount","depositFields":false},{"id":"cat-deposit","name":"예적금","color":"#0EA5E9","valuationMode":"direct_amount","depositFields":true},{"id":"cat-bond","name":"채권","color":"#10B981","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-realestate","name":"부동산","color":"#F59E0B","valuationMode":"direct_amount","depositFields":false},{"id":"cat-fund","name":"펀드·신탁","color":"#EC4899","valuationMode":"direct_amount","depositFields":false},{"id":"cat-alternative","name":"대체자산","color":"#8B5CF6","valuationMode":"direct_amount","depositFields":false},{"id":"cat-other","name":"기타","color":"#64748B","valuationMode":"direct_amount","depositFields":false}],"assetClasses":[{"id":"ac-equity","name":"주식","color":"#5B5CF0","targetPct":null},{"id":"ac-bond","name":"채권","color":"#10B981","targetPct":null},{"id":"ac-cashlike","name":"현금성","color":"#06B6D4","targetPct":null},{"id":"ac-commodity","name":"원자재","color":"#F59E0B","targetPct":null},{"id":"ac-realestate","name":"부동산","color":"#EC4899","targetPct":null},{"id":"ac-other","name":"기타","color":"#64748B","targetPct":null}],"accounts":[],"assets":[],"activityLog":[],"monthlySnapshots":[],"notes":[],"reconstructedTrades":[]},KEY="assetview.sample.v6";
+const SAMPLE={"version":4,"meta":{"app":"AssetView","currency":"KRW","updatedAt":"","sampleNote":"빈 초기 데이터. JSON 불러오기로 자산 데이터를 입력하세요."},"settings":{"priceApiEndpoint":"","historicalPriceApiEndpoint":"","autoRefreshPrices":false,"marketSignal":{"asOf":"","breadthPct":null,"rspSpyTrend":"flat","treasury10y":null,"nasdaqDrawdown":null,"goldDrawdown":null,"kospiDrawdown":null,"diagnosis":"","action":"","nextCondition":"","conditionStatus":"","updatedAt":""}},"accountCategories":[{"id":"acct-general","name":"일반","color":"#3B82F6"},{"id":"acct-isa","name":"ISA","color":"#8B5CF6"},{"id":"acct-pension","name":"연금저축","color":"#14B8A6"},{"id":"acct-irp","name":"IRP","color":"#F59E0B"},{"id":"acct-bank","name":"은행","color":"#06B6D4"}],"assetCategories":[{"id":"cat-equity","name":"주식","color":"#5B5CF0","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-cash","name":"현금(입출금)","color":"#06B6D4","valuationMode":"direct_amount","depositFields":false},{"id":"cat-deposit","name":"예적금","color":"#0EA5E9","valuationMode":"direct_amount","depositFields":true},{"id":"cat-bond","name":"채권","color":"#10B981","valuationMode":"quantity_price_fallback","depositFields":false},{"id":"cat-realestate","name":"부동산","color":"#F59E0B","valuationMode":"direct_amount","depositFields":false},{"id":"cat-fund","name":"펀드·신탁","color":"#EC4899","valuationMode":"direct_amount","depositFields":false},{"id":"cat-alternative","name":"대체자산","color":"#8B5CF6","valuationMode":"direct_amount","depositFields":false},{"id":"cat-other","name":"기타","color":"#64748B","valuationMode":"direct_amount","depositFields":false}],"assetClasses":[{"id":"ac-equity","name":"주식","color":"#5B5CF0","targetPct":null},{"id":"ac-bond","name":"채권","color":"#10B981","targetPct":null},{"id":"ac-cashlike","name":"현금성","color":"#06B6D4","targetPct":null},{"id":"ac-commodity","name":"원자재","color":"#F59E0B","targetPct":null},{"id":"ac-realestate","name":"부동산","color":"#EC4899","targetPct":null},{"id":"ac-other","name":"기타","color":"#64748B","targetPct":null}],"accounts":[],"assets":[],"activityLog":[],"monthlySnapshots":[],"notes":[],"reconstructedTrades":[]},KEY="assetview.sample.v6";
 class LocalRepository{getData(){const x=localStorage.getItem(KEY);return x?JSON.parse(x):structuredClone(SAMPLE)}saveData(x){x.meta=x.meta||{};x.meta.updatedAt=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(x))}}
 const repo=new LocalRepository();let state=repo.getData(),dashMode="current",page=1,parsedAI=null,assetSort={key:"value",dir:"desc"},accountSort={key:"value",dir:"desc"};
 const $=x=>document.getElementById(x), esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
@@ -566,7 +573,7 @@ function classifyAssetClass(a){const t=(a.tags||[]).map(x=>String(x).toLowerCase
 function ensureAssetClassFields(){
   state.notes=state.notes||[];
   state.settings=state.settings||{};
-  state.settings.marketSignal=state.settings.marketSignal||{breadthPct:null,rspSpyTrend:"flat",treasury10y:null,nasdaqDrawdown:null,note:"",diagnosis:"",action:"",nextCondition:"",conditionStatus:"",updatedAt:""};
+  state.settings.marketSignal=state.settings.marketSignal||{breadthPct:null,rspSpyTrend:"flat",treasury10y:null,nasdaqDrawdown:null,goldDrawdown:null,kospiDrawdown:null,note:"",diagnosis:"",action:"",nextCondition:"",conditionStatus:"",updatedAt:""};
   if(state.notes.length===0&&SAMPLE.notes?.length)state.notes=structuredClone(SAMPLE.notes);
   state.assetClasses=state.assetClasses||structuredClone(SAMPLE.assetClasses);
   state.assetClasses.forEach(c=>{if(c.targetPct===undefined)c.targetPct=null});
@@ -643,31 +650,40 @@ function renderPortfolioStatus(){
  if(growthPct>=40&&cashPct>=15&&concPct>=20&&concPct<30)action="성장주 노출·단일종목 집중이 높음 · 신규자금은 S&P500/현금성으로 균형";
  $("pfAction").textContent=action;
 }
-function marketSignalData(){const ms=state.settings?.marketSignal||{};return{breadthPct:ms.breadthPct??null,rspSpyTrend:ms.rspSpyTrend||"flat",treasury10y:ms.treasury10y??null,nasdaqDrawdown:ms.nasdaqDrawdown??null,asOf:ms.asOf||"",diagnosis:ms.diagnosis||ms.note||"",action:ms.action||"",nextCondition:ms.nextCondition||"",conditionStatus:ms.conditionStatus||"",updatedAt:ms.updatedAt||""}}
+function marketSignalData(){const ms=state.settings?.marketSignal||{};return{breadthPct:ms.breadthPct??null,treasury10y:ms.treasury10y??null,nasdaqDrawdown:ms.nasdaqDrawdown??null,goldDrawdown:ms.goldDrawdown??null,kospiDrawdown:ms.kospiDrawdown??null,asOf:ms.asOf||"",diagnosis:ms.diagnosis||ms.note||"",action:ms.action||"",nextCondition:ms.nextCondition||"",conditionStatus:ms.conditionStatus||"",updatedAt:ms.updatedAt||""}}
 function marketSignalAction(ms){
- const b=Number(ms.breadthPct),y=Number(ms.treasury10y),d=Number(ms.nasdaqDrawdown);
- const hasB=ms.breadthPct!==null&&ms.breadthPct!==""&&!Number.isNaN(b),hasY=ms.treasury10y!==null&&ms.treasury10y!==""&&!Number.isNaN(y),hasD=ms.nasdaqDrawdown!==null&&ms.nasdaqDrawdown!==""&&!Number.isNaN(d);
- if(hasB&&b>=50&&ms.rspSpyTrend==="up")return "시장 폭 확산 · 동일가중 S&P500 300~500만원 검토";
- if(hasD&&d<=-10)return "성장주 조정 · 실적 훼손 없으면 S&P500/나스닥 300~500만원 분할매수 검토";
- if(hasY&&y>=5)return "S&P500 분할매수 · KOFR 대기자금 유지";
- if(hasD&&d>-5)return "강세 지속 · 나스닥 추격보다 S&P500 정액매수";
- return "S&P500 분할매수 · KOFR 일부 유지";
+ const y=Number(ms.treasury10y),d=Number(ms.nasdaqDrawdown),g=Number(ms.goldDrawdown),k=Number(ms.kospiDrawdown);
+ const hasY=ms.treasury10y!==null&&ms.treasury10y!==""&&!Number.isNaN(y),hasD=ms.nasdaqDrawdown!==null&&ms.nasdaqDrawdown!==""&&!Number.isNaN(d),hasG=ms.goldDrawdown!==null&&ms.goldDrawdown!==""&&!Number.isNaN(g),hasK=ms.kospiDrawdown!==null&&ms.kospiDrawdown!==""&&!Number.isNaN(k);
+ if(hasD&&d<=-10)return "성장주 조정폭이 커졌습니다. 실적 훼손 여부를 확인하며 분할매수를 검토하세요.";
+ if(hasK&&k<=-10)return "KOSPI 조정폭이 커졌습니다. 국내주식 비중과 업황을 확인하며 분할매수를 검토하세요.";
+ if(hasG&&g<=-10)return "금 조정폭이 커졌습니다. 기존 금 비중과 금리·달러 흐름을 확인한 뒤 추가매수를 검토하세요.";
+ if(hasY&&y>=5)return "금리 부담이 높은 구간입니다. 추격매수는 줄이고 코어지수 분할매수와 대기자금 유지를 우선하세요.";
+ return "자산별 가격 부담을 비교해 코어자산은 분할매수하고 대기자금은 일부 유지하세요.";
+}
+function escapeMarketText(v){return String(v??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g,"&quot;").replace(/'/g,"&#39;")}
+function setMarketRichText(id,text){const safe=escapeMarketText(text);$(id).innerHTML=safe.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\n/g,"<br>")}
+function ddSignal(el,value,label){
+ if(value===null||value===""){el.textContent="미입력";el.className="signal-neutral";return}
+ const n=Number(value),state=n<=-15?"큰 조정":n<=-10?"조정":n<=-5?"조정 중":"고점권";
+ el.textContent=`${state} · ${n.toFixed(1)}%`;el.className=n<=-10?"signal-warn":"signal-neutral";
 }
 function renderMarketSignal(){
- const ms=marketSignalData(),b=ms.breadthPct,y=ms.treasury10y,d=ms.nasdaqDrawdown;
- const sb=$("sigBreadth"),sy=$("sigYield"),sn=$("sigNasdaq");
- if(b===null||b===""){sb.textContent="미입력";sb.className="signal-neutral"}else{const n=Number(b),lab=(n>=60?"강함":n>=50?"회복":"약함");sb.textContent=`${lab} · ${n.toFixed(1)}%${ms.rspSpyTrend==="up"?" · RSP↑":ms.rspSpyTrend==="down"?" · RSP↓":""}`;sb.className=n>=50?"signal-up":"signal-warn"}
+ const ms=marketSignalData(),b=ms.breadthPct,y=ms.treasury10y;
+ const sb=$("sigBreadth"),sy=$("sigYield");
+ if(b===null||b===""){sb.textContent="미입력";sb.className="signal-neutral"}else{const n=Number(b),lab=(n>=60?"강함":n>=50?"보통":"약함");sb.textContent=`${lab} · ${n.toFixed(1)}%`;sb.className=n>=50?"signal-up":"signal-warn"}
  if(y===null||y===""){sy.textContent="미입력";sy.className="signal-neutral"}else{const n=Number(y),lab=n>=5?"높음":n>=4.5?"경계":"안정";sy.textContent=`${lab} · ${n.toFixed(2)}%`;sy.className=n>=5?"signal-risk":n>=4.5?"signal-warn":"signal-up"}
- if(d===null||d===""){sn.textContent="미입력";sn.className="signal-neutral"}else{const n=Number(d),lab=n<=-10?"조정":n<=-5?"조정 중":"강세";sn.textContent=`${lab} · 고점대비 ${n.toFixed(1)}%`;sn.className=n<=-10?"signal-up":n<=-5?"signal-warn":"signal-up"}
- $("sigDiagnosis").textContent=ms.diagnosis||"시장진단을 입력하세요.";
- $("sigAction").textContent=ms.action||marketSignalAction(ms);
- $("sigNextCondition").textContent=ms.nextCondition||"다음 행동으로 전환할 조건을 입력하세요.";
- $("sigConditionStatus").textContent=ms.conditionStatus||"현재 조건 충족 여부를 입력하세요.";
+ ddSignal($("sigNasdaq"),ms.nasdaqDrawdown,"Nasdaq-100");
+ ddSignal($("sigGold"),ms.goldDrawdown,"금");
+ ddSignal($("sigKospi"),ms.kospiDrawdown,"KOSPI");
+ setMarketRichText("sigDiagnosis",ms.diagnosis||"시장진단을 입력하세요.");
+ setMarketRichText("sigAction",ms.action||marketSignalAction(ms));
+ setMarketRichText("sigNextCondition",ms.nextCondition||"다음 행동으로 전환할 조건을 입력하세요.");
+ setMarketRichText("sigConditionStatus",ms.conditionStatus||"현재 조건 충족 여부를 입력하세요.");
  const upd=ms.updatedAt?new Date(ms.updatedAt).toLocaleDateString("ko-KR"):"미입력";
  $("marketSignalUpdated").textContent=ms.asOf?`기준 ${ms.asOf} · 입력 ${upd}`:`마지막 입력 ${upd}`;
 }
-function openMarketSignal(){const ms=marketSignalData();$("msAsOf").value=ms.asOf||"";$("msBreadth").value=ms.breadthPct??"";$("msRsp").value=ms.rspSpyTrend||"flat";$("msYield").value=ms.treasury10y??"";$("msNasdaqDD").value=ms.nasdaqDrawdown??"";$("msDiagnosis").value=ms.diagnosis||"";$("msAction").value=ms.action||marketSignalAction(ms);$("msNextCondition").value=ms.nextCondition||"";$("msConditionStatus").value=ms.conditionStatus||"";$("marketSignalDialog").showModal()}
-$("editMarketSignal").onclick=openMarketSignal;$("cancelMarketSignal").onclick=()=>$("marketSignalDialog").close();$("saveMarketSignal").onclick=()=>{state.settings=state.settings||{};state.settings.marketSignal={asOf:$("msAsOf").value,breadthPct:$("msBreadth").value===""?null:Number($("msBreadth").value),rspSpyTrend:$("msRsp").value,treasury10y:$("msYield").value===""?null:Number($("msYield").value),nasdaqDrawdown:$("msNasdaqDD").value===""?null:Number($("msNasdaqDD").value),diagnosis:$("msDiagnosis").value.trim(),action:$("msAction").value.trim(),nextCondition:$("msNextCondition").value.trim(),conditionStatus:$("msConditionStatus").value.trim(),updatedAt:new Date().toISOString()};$("marketSignalDialog").close();save()};
+function openMarketSignal(){const ms=marketSignalData();$("msAsOf").value=ms.asOf||"";$("msBreadth").value=ms.breadthPct??"";$("msYield").value=ms.treasury10y??"";$("msNasdaqDD").value=ms.nasdaqDrawdown??"";$("msGoldDD").value=ms.goldDrawdown??"";$("msKospiDD").value=ms.kospiDrawdown??"";$("msDiagnosis").value=ms.diagnosis||"";$("msAction").value=ms.action||marketSignalAction(ms);$("msNextCondition").value=ms.nextCondition||"";$("msConditionStatus").value=ms.conditionStatus||"";$("marketSignalDialog").showModal()}
+$("editMarketSignal").onclick=openMarketSignal;$("cancelMarketSignal").onclick=()=>$("marketSignalDialog").close();$("saveMarketSignal").onclick=()=>{state.settings=state.settings||{};state.settings.marketSignal={asOf:$("msAsOf").value,breadthPct:$("msBreadth").value===""?null:Number($("msBreadth").value),treasury10y:$("msYield").value===""?null:Number($("msYield").value),nasdaqDrawdown:$("msNasdaqDD").value===""?null:Number($("msNasdaqDD").value),goldDrawdown:$("msGoldDD").value===""?null:Number($("msGoldDD").value),kospiDrawdown:$("msKospiDD").value===""?null:Number($("msKospiDD").value),diagnosis:$("msDiagnosis").value.trim(),action:$("msAction").value.trim(),nextCondition:$("msNextCondition").value.trim(),conditionStatus:$("msConditionStatus").value.trim(),updatedAt:new Date().toISOString()};$("marketSignalDialog").close();save()};
 $("marketHelpBtn").onclick=()=>$("marketHelpDialog").showModal();$("portfolioHelpBtn").onclick=()=>$("portfolioHelpDialog").showModal();$("closeMarketHelp").onclick=()=>$("marketHelpDialog").close();$("closePortfolioHelp").onclick=()=>$("portfolioHelpDialog").close();$("copyMarketPrompt").onclick=async()=>{try{await navigator.clipboard.writeText($("marketPromptText").value);$("copyMarketPrompt").textContent="복사됨";setTimeout(()=>$("copyMarketPrompt").textContent="문구 복사",1200)}catch(e){$("marketPromptText").select();document.execCommand("copy")}};
 
 function fillMonths(){const ms=[...state.monthlySnapshots].sort((a,b)=>b.month.localeCompare(a.month)),old=$("monthSelect").value;$("monthSelect").innerHTML=ms.map(s=>`<option value="${s.month}">${s.month}</option>`).join("");if(ms.some(s=>s.month===old))$("monthSelect").value=old;$("monthSelect").style.display=dashMode==="month"?"inline-block":"none"}
